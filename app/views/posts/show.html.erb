@@ -1,0 +1,44 @@
+<% content_for :page_title, "Post Title: " + @post.title %>
+
+<section class="section">
+  <div class="container">
+    <nav class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <p class="subtitle is-5">
+            <strong>Actions</strong>
+          </p>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <p class="subtitle is-5">
+            <%= link_to "Edit", edit_post_path(@post), class: "button is-light" %>
+          </p>
+        </div>
+        <div class="level-item">
+          <p class="subtitle is-5">
+            <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "button is-danger" %>
+          </p>
+        </div>
+      </div>
+    </nav>
+    <div class="content">
+      <%= @post.content %>
+    </div>
+  </div>
+</section>
+
+<section class="section comments">
+  <div class="container">
+    <h2 class="subtitle is-5">
+      <strong><%= @post.comments.count %></strong> Comments
+    </h2>
+    <%= render @post.comments %>
+    <div class="comment-form">
+      <hr/>
+      <h4 class="subtitle">Leave a comment</h4>
+      <%= render 'comments/form' %>
+    </div>
+  </div>
+</section>
