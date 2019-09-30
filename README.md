@@ -8,3 +8,7 @@ The project is continuation from [Let's Build: With Ruby on Rails - Blog with Co
 - Show excerpt
 - Form validation
 - Gravatar and date in the comment
+
+### Gems used in the project
+
+- [pagy](https://rubygems.org/gems/pagy) - Agnostic pagination in plain ruby.
