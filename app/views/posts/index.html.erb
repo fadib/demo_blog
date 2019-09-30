@@ -11,7 +11,7 @@
             </div>
           </div>
           <div class="content">
-            <%= post.content %>
+            <%= truncate(sanitize(post.content), length: 450) { link_to "read more", post_path(post) } %>
           </div>
         </div>
       </div>
