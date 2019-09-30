@@ -1,9 +1,15 @@
 <div class="box">
   <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <%= gravatar_image_tag(comment.email, :alt => comment.name) %>
+      </figure>
+    </div>
     <div class="media-content">
       <div class="content">
         <p>
           <strong><%= comment.name %></strong>
+          <small>- <%= comment.created_at.to_time.strftime('%B %e at %l:%M %p') %></small>
           <br>
           <%= comment.comment_content %>
         </p>

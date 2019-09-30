@@ -12,3 +12,5 @@ The project is continuation from [Let's Build: With Ruby on Rails - Blog with Co
 ### Gems used in the project
 
 - [pagy](https://rubygems.org/gems/pagy) - Agnostic pagination in plain ruby.
+
+- [gravatar_image_tag](https://rubygems.org/gems/gravatar_image_tagy) - Adding gravatars into your Rails application.

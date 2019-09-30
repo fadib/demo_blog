@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_29_123954) do
+ActiveRecord::Schema.define(version: 2019_09_30_022718) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "post_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_09_29_123954) do
     t.text "comment_content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
   end
 
   create_table "posts", force: :cascade do |t|
